@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coffee</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="container">
+
+        <nav>
+
+            <div id="mySidenav" class="sidenav">
+                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+                    <li><a href="/">Order</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">SignUp</a></li>
+            </div>
+
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+        </nav>
+
+        <div class="d-flex justify-content-center col-sm-12">
+            <h1 class="">Local Coffee Order</h1>
+            <img src="/img/logo.png" alt="logo" height="100px">
+        </div>
+
+        
+        <section class="d-flex justify-content-around" id="buttonContainer">
+            <div id="order" class="d-flex justify-content-center flex-column align-items-center">
+                <h2>ORDER</h2>
+                <ul id="orderList">
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center mb-4 mt-5">
+                    <input id="name" class="customer" type="text" name="name" placeholder="name" id="name">
+                </div>
+                <div class="d-flex justify-content-around mb-3">
+                    <label class="" for="size">Size:</label>
+                    <button class="btn size item" type="button" id="small" value="X-Small">X-Small</button>
+                    <button class="btn size item" type="button" value="Small">Small</button>
+                    <button class="btn size item" type="button" value="Medium">Medium</button>
+                    <button class="btn size item" type="button" value="Large">Large</button>
+                    <button class="btn size item" type="button" value="X-Large">X-Large</button>
+                </div>
+
+                <div class="d-flex justify-content-around mb-3">
+                    <label class="" for="coffee">Type:</label>
+                    <button value="Black" type="button" class="btn item coffee" id="black">Black</button>
+                    <button value="Latte" type="button" class="btn item coffee" id="latte">Latte</button>
+                    <button value="Cappuccino" type="button" class="btn item coffee" id="cappuccino">Cappuccino</button>
+                    <button value="Kopi Luwak" type="button" class="btn item coffee" id="kopi">Kopi Luwak</button>
+                </div>
+
+                <div class="d-flex justify-content-around mb-3">
+                    <label class="" for="extra">Extra:</label>
+                    <button class="btn extra item" type="button" value="Milk" id="milk">Milk</button>
+                    <button class="btn extra item" type="button" value="Espresso" id="expresso">Espresso</button>
+                    <button class="btn extra item" type="button" value="Sugar" id="sugar">Sugar</button>
+                    <button class="btn extra item" type="button" value="Cream" id="cream">Cream</button>
+    
+                </div>
+
+
+                <div class="d-flex justify-content-between mt-5">
+
+                    <button class="btn btn-danger cancelButton" type="button">Cancel Order</button>
+                    <button class="btn btn-warning lastItem" type="button">Remove Last Item</button>
+
+                    <button type="button" class="btn btn-info add">Add</button>
+                    <button type="button" class="btn btn-success submitButton">Order</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</body>
+
+</html>
